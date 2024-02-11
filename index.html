@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora Tiers</title>
+</head>
+<body>
+    <div id="contenedorCalculadora">
+        <form action="">
+            <h2>Calculadora Tiers</h2>
+            <label for="tiersInicial" id="labelTierInicial">Nivel tiers inicial</label>
+            <span class="linea">
+                <div class="botoncito" id="menosInicial">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <input type="text" id="tiersInicial" value="6" readonly>
+                <div class="botoncito" id="masInicial">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </span>
+            <label for="tiersFinal" id="labelTierFinal">¿Que tier quieres hacer?</label>
+            <span class="linea">
+                <div class="botoncito" id="menosFinal">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+                <input type="text" id="tiersFinal" value="7" readonly>
+                <div class="botoncito" id="masFinal">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </span>    
+            
+            <button id="botonCalcularTiers">Calcular</button>
+            <div id="resultado">
+                Items: ? <br/>
+                Cargas: ?
+            </div>
+        </form>
+    </div>
+    
+    <!--
+
+        notas importante
+        poner boton al lado de cada campo de + y - para ajustar valores
+        intentar q se deshabilite cuando baje del valor q quiero
+        poner efecto del boton cuando hover en calcular
+        crear evecto de que se desplace al calcular y muestre solo el resultado
+
+    -->
+
+
+    <script src="js/scriptCalcularTiers.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
