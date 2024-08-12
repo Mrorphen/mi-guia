@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;    
-    color:#ccbd58;
+    font-family: "Roboto", sans-serif;    
 }
 
 a{
@@ -10,12 +12,296 @@ a{
 
 body{
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    margin: 0 10px;
+    color: #ccbd58;
+    box-shadow:  0 4px 10px #ccbd58;
+    z-index: 1;
+
+}
+
+.navbar .menu{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;    
+    list-style: none;
+    
+}
+
+.navbar .menu li{
+    margin-right: 5px;  
+      
+}
+
+.navbar .menu li a {
+    padding: 10px;
+    border-radius: 5px;  
+    transition: ease 0.5s; 
+    font-weight: 600;
+    color: #ccbd58;
+}
+
+.navbar .menu li a:hover {    
+    background-color: rgba(204, 189, 88, 0.8);
+    color:#fff;
+}
+
+.navbar .menu li a span{
+    margin-right: 5px;    
+}
+
+.navbar .selectMode{
+    width: 50px;
+    height: 20px;
+    line-height: 20px;    
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    border-radius: 40%;
+    background-color: #e4e5e6;
+    border: 2px solid #000;
+    position:relative;
+}
+
+.navbar .selectMode .circle{
+    content:'';
+    position: absolute;
+    left: 0;
+    margin-left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #e4e5e6;
+    cursor:pointer;
+    transition: ease 0.2s;
+}
+
+.circle-active{
+    content:'';
+    position: absolute;
+    right: 0 !important;
+    margin-right: -5px !important;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #e4e5e6;
+    cursor:pointer;
+    transition: ease 0.2s;
+}
+
+.selectMode .day{
+    color:#d6da05;
+}
+
+.selectMode .night{
+    color:#18038f;
+}
+
+.cocina{
+    width: 100%;
+    height: 100vh;
+    /*background-color: #e4e5e6;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    background-image: url('../img/bg-food.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.alquimia{
+    width: 100%;
+    height: 100vh;
+    /*background-color: #e4e5e6;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../img/bg-potions.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cocina h2,
+.cocinadark-mode h2{
+    margin-top: 22px;
+    width: 100%;
+    color: #ccbd58;
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    
+}
+
+
+.alquimia h2,
+.alquimiadark-mode h2{
+    width: 100%;
+    color: #ccbd58;
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+    
+}
+
+.contenedorRecetas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;
+    gap: 10px; *//* Espacio entre los elementos */
+    backdrop-filter: blur(20px);
+}
+
+.listado{
+    width: 30%;
+    height: 100%;    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(39, 29, 20, 0.8);
+}
+
+.listado ul{
+    width: 90%;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.listado ul li{
+    font-weight: 700;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #000;
+    color: #ccbd58;
+    border-radius: 10px;
+    background-color: #271d14;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.listado ul li:hover{
+    border: 2px solid #ccbd58;
+    text-shadow: 0 0 15px #ccbd58;
+    box-shadow: 0px 0px 10px #ccbd58; 
+}
+
+.recetaSelecionada{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;    
+}
+
+.cocina .contenedorRecetas .receta,
+.alquimia .contenedorRecetas .receta,
+.cocinadark-mode .contenedorRecetas .receta,
+.alquimiadark-mode .contenedorRecetas .receta{
+    width: 80%;
+    padding: 20px;
+    background-color: #271d14;
+    color: #ccbd58;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 0px 0px 25px #3a3a3a;
+    /*margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;*/
+}
+
+
+
+
+.cocina .contenedorRecetas .receta .titulo,
+.alquimia .contenedorRecetas .receta .titulo,
+.cocinadark-mode .contenedorRecetas .receta .titulo,
+.alquimiadark-mode .contenedorRecetas .receta .titulo{
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid #ccbd58;
+}
+
+.cocina .contenedorRecetas .receta .materiales,
+.alquimia .contenedorRecetas .receta .materiales,
+.cocinadark-mode .contenedorRecetas .receta .materiales,
+.alquimiadark-mode .contenedorRecetas .receta .materiales{
+    padding: 15px;
+}
+
+.cocina .contenedorRecetas .receta .materiales p,
+.alquimia .contenedorRecetas .receta .materiales p,
+.cocinadark-mode .contenedorRecetas .receta .materiales p,
+.alquimiadark-mode .contenedorRecetas .receta .materiales p{
+    margin: 8px 0 15px 0;
+}
+
+.cocina .contenedorRecetas .receta .materiales ul,
+.alquimia .contenedorRecetas .receta .materiales ul,
+.cocinadark-mode .contenedorRecetas .receta .materiales ul,
+.alquimiadark-mode .contenedorRecetas .receta .materiales ul{
+    list-style: none;
+}
+
+.cocina .contenedorRecetas .receta .materiales ul p,
+.alquimia .contenedorRecetas .receta .materiales ul p,
+.cocinadark-mode .contenedorRecetas .receta .materiales ul p,
+.alquimiadark-mode .contenedorRecetas .receta .materiales ul p{
+    margin-top: 15px;
+}
+
+.cocina .contenedorRecetas .receta .materiales ul li,
+.alquimia .contenedorRecetas .receta .materiales ul li,
+.cocinadark-mode .contenedorRecetas .receta .materiales ul li,
+.alquimiadark-mode .contenedorRecetas .receta .materiales ul li{
+    margin-left: 15px;
+    margin-bottom: 2px;
+    color: #fff;
+}
+
+.calculadora{
+    width: 100%;
     height: 100vh;
     background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color:#ccbd58;
 }
 
 #contenedorCalculadora{
@@ -142,34 +428,107 @@ body{
 }
 
 
-@media only screen and (max-width: 1200px) {
-    #contenedorCalculadora{
-        width: 90%;
-        height: 550px;
-    }
+.macros{
+    width: 100%;
+    min-height: 100vh;
+    /*background-color: #000;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color:#ccbd58;
+    flex-direction: column;
+    background-image: url('../img/bg-macros.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
-    #contenedorCalculadora form h2{
-        font-size: 2.3rem;
-    }
+.contenedorMacros{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;
+    gap: 10px; *//* Espacio entre los elementos */
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
 
-    #contenedorCalculadora form label{
-        font-size: 1.5rem;
-    }
+.macros h2{   
+    margin-bottom: 10px;
+    width: 100%;
+    color: #ccbd58;
+    background-color: #271d14;
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+}
 
-    #contenedorCalculadora form #botonCalcularTiers{
-        width: 300px;
-        height: 60px;
-        font-size: 1.3rem;
-        
-    }
+.macros .listadoMacros{
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-    .botoncito{
-        width: 32px;
-        height: 32px;
-        font-size: 1.5rem;
-        padding: 8px;
-        border-radius: 50%;
-        cursor: pointer;
-        
-    }
+.macros .listadoMacros .unaMacro{
+    width: 100%;
+    padding: 10px;
+    background-color: #271d14;
+    color: #ccbd58;
+    border-radius: 10px;
+    border: 2px solid #ccbd58;
+    box-shadow: 0px 0px 25px #3a3a3a;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.macros .listadoMacros .unaMacro .descripcion{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccbd58;
+}
+
+.macros .listadoMacros .unaMacro .codigo{
+    color: #fff;
+}
+
+.cocinadark-mode{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    
+}
+
+.alquimiadark-mode{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.listadodark-mode{
+    /*width: 30%;
+    height: 100%;    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    background-color: #000 !important;
 }

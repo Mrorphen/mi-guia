@@ -7,51 +7,193 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Calculadora Tiers</title>
 </head>
-<body>
-    <div id="contenedorCalculadora">
-        <form action="">
-            <h2>Calculadora Tiers</h2>
-            <label for="tiersInicial" id="labelTierInicial">Nivel tiers inicial</label>
-            <span class="linea">
-                <div class="botoncito" id="menosInicial">
-                    <i class="fa-solid fa-minus"></i>
-                </div>
-                <input type="text" id="tiersInicial" value="6" readonly>
-                <div class="botoncito" id="masInicial">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-            </span>
-            <label for="tiersFinal" id="labelTierFinal">¿Que tier quieres hacer?</label>
-            <span class="linea">
-                <div class="botoncito" id="menosFinal">
-                    <i class="fa-solid fa-minus"></i>
-                </div>
-                <input type="text" id="tiersFinal" value="7" readonly>
-                <div class="botoncito" id="masFinal">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-            </span>    
-            
-            <button id="botonCalcularTiers">Calcular</button>
-            <div id="resultado">
-                Items: ? <br/>
-                Cargas: ?
+<body id="body">
+    <header class="navbar" id="navbar">
+        <ul class="menu">
+            <li>                    
+                <a href="#body"><span class="icon"><i class="fa-solid fa-house"></i></span>INICIO</a>
+            </li>
+            <li>
+                <a href="#cocina"><span class="icon"><i class="fa-solid fa-utensils"></i></span>COCINA</a>
+            </li>
+            <li>
+                <a href="#calculadora"><span class="icon"><i class="fa-solid fa-calculator"></i></span>CALCULADORA TIERS</a>
+            </li>
+            <li>
+                <a href="#alquimia"><span class="icon"><i class="fa-solid fa-flask"></i></span>ALQUIMIA</a>
+            </li>            
+            <li>
+                <a href="#macros"><span class="icon"><i class="fa-solid fa-book"></i></span>MACROS</a>
+            </li>
+            <li>                    
+                <a href=""><span class="icon"><i class="fa-solid fa-circle-question"></i></span>VARIOS</a>
+            </li>
+        </ul>
+
+        <div class="selectMode">
+            <span class="circle" id="circle"></span>
+            <span class="day"><i class="fa-solid fa-sun"></i></span>
+            <span class="night"><i class="fa-solid fa-moon"></i></span>
+        </div>
+    </header>
+    
+    <div class="cocina" id="cocina">
+        <!--
+        <h2>Recetas de cocina más utiles</h2>
+        -->
+        
+        
+        <div class="contenedorRecetas">            
+            <div class="listado">
+                
+                <ul>
+                    <i><h2>Mejores recetas de cocina:</h2></i>
+                    <br/>                    
+                    <li id="bocadilloCaviar">Bocadillo de caviar (N.20)</li>
+                    <li id="tartaLaor">Tarta del bosque de laor (N.50)</li>
+                    <li id="serenstum">Serenstum (N.54)</li>
+                    <li id="pescadoVapor">Filete de pescado al vapor (N.98)</li>
+                    <li id="panRon">Pan aromatizado con ron pigmeo (N.98)</li>
+                    <li id="costillaMiel">Costilla con miel (N.98)</li>
+                    <li id="bocadilloVerduras">Bocadillo de verduras (N.98)</li>
+                </ul>
             </div>
-        </form>
+            <div class="recetaSelecionada" id="recetaSelecionada">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="calculadora" id="calculadora">
+        <div id="contenedorCalculadora">
+            <form action="">
+                <h2>Calculadora Tiers</h2>
+                <label for="tiersInicial" id="labelTierInicial">Nivel tiers inicial</label>
+                <span class="linea">
+                    <div class="botoncito" id="menosInicial">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <input type="text" id="tiersInicial" value="6" readonly>
+                    <div class="botoncito" id="masInicial">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </span>
+                <label for="tiersFinal" id="labelTierFinal">¿Que tier quieres hacer?</label>
+                <span class="linea">
+                    <div class="botoncito" id="menosFinal">
+                        <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <input type="text" id="tiersFinal" value="7" readonly>
+                    <div class="botoncito" id="masFinal">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </span>    
+                
+                <button id="botonCalcularTiers">Calcular</button>
+                <div id="resultado">
+                    Items: ? <br/>
+                    Cargas: ?
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="alquimia" id="alquimia">
+        
+        <div class="contenedorRecetas">
+                      
+            <div class="listado">
+                
+                <ul>
+                    <i><h2>Mejores recetas de alquimia:</h2></i>
+                    <br/>                    
+                    <li id="estimulanteFuerte">Estimulante fuerte (N.17)</li>
+                    <li id="polvoTranquilidad">Polvo de la tranquilidad (N.25)</li>
+                    <li id="toqueUnicornio">Toque del unicornio (N.31)</li>
+                    <li id="pocionHeroica">Poción heroica (N.47)</li>
+                    <li id="pocionExtincion">Poción de extinción (N.60)</li>
+                    <li id="pocionApagado">Poción de apagado (N.60)</li>
+                </ul>
+            </div>
+            <div class="recetaSelecionada" id="alquimiaSelecionada">
+                
+            </div>
+
+        </div>
+
     </div>
     
-    <!--
 
-        notas importante
-        poner boton al lado de cada campo de + y - para ajustar valores
-        intentar q se deshabilite cuando baje del valor q quiero
-        poner efecto del boton cuando hover en calcular
-        crear evecto de que se desplace al calcular y muestre solo el resultado
+    <div class="macros" id="macros">
+        <h2>Macros interesantes</h2>
+        <div class="contenedorMacros">            
+            <div class="listadoMacros">
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Reduce tiempo de entrada de objetos en la mochila.</p>
+                    <p class="codigo">
+                        /run ITEM_QUEUE_FRAME_UPDATETIME = 0.2;ITEM_QUEUE_FRAME_INSERTITEM = 0
+                    </p>
+                </div>
 
-    -->
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Ver id titulo actual.</p>
+                    <p class="codigo">
+                        /run ChatFrame1:AddMessage(GetCurrentTitle())
+                    </p>
+                </div>
+
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Lanza sangreferrea.</p>
+                    <p class="codigo">
+                        /run SetTitleRequest(530592)
+                        /wait 0.3
+                        /Lanzar Voluntad de Sangreférrea
+                        /run SetTitleRequest(531030) OJO, AQUI PONE UN TITULO, NO EL QUE TENIAS ANTES, PRIMERO TIENES QUE SABER QUE CODIGO TIENE TU TITULO PARA PONERLO AQUI
+                    </p>
+                </div> 
+
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Minijuego tortugas.</p>
+                    <p class="codigo">
+                        /script UseExtraAction(1)
+                        /script SpellTargetUnit("mouseover")
+                    </p>
+                </div> 
+
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Diaria botellitas.</p>
+                    <p class="codigo">
+                        /script TargetNearestFriend()
+                        /run UseItemByName("Poción de energía")
+                    </p>
+                </div> 
+
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Diaria setas.</p>
+                    <p class="codigo">
+                        /script TargetNearestFriend()
+                        /run UseItemByName("Hierba Bachi")
+                    </p>
+                </div> 
+
+                <div class="unaMacro">
+                    <p class="descripcion">Descripcion: Macro poner arma.</p>
+                    <p class="codigo">
+                        /run EquipItem(16)
+                        /wait .2
+                        /run UseItemByName("Nombre arma")
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="js/scriptCalcularTiers.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/all.min.js"></script>
 </body>
 </html>
