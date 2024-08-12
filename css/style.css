@@ -22,7 +22,7 @@ body{
 .navbar{
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 99%;
     height: 45px;
     background-color: #000;
     display: flex;
@@ -458,7 +458,7 @@ body{
 
 .macros h2{   
     margin-bottom: 10px;
-    width: 100%;
+    width: 99%;
     color: #ccbd58;
     background-color: #271d14;
     height: 45px;
