@@ -6,6 +6,7 @@ let circulo = document.querySelector("#circle");
 let vCocina = document.getElementById("cocina");
 let vAlquimia = document.getElementById("alquimia");
 let vlistados = document.querySelectorAll(".listado");
+let vMacros = document.getElementById("macros");
 
 
 circulo.addEventListener("click", () => {    
@@ -19,6 +20,8 @@ circulo.addEventListener("click", () => {
         for(i = 0;i<vlistados.length;i++){
             vlistados[i].classList.add("listadodark-mode");
         }
+        vMacros.classList.remove("macros");
+        vMacros.classList.add("macrosdark-mode");
     } else {
         circulo.classList.add("circle");
         circulo.classList.remove("circle-active");
@@ -29,6 +32,8 @@ circulo.addEventListener("click", () => {
         for(i = 0;i<vlistados.length;i++){
             vlistados[i].classList.remove("listadodark-mode");
         }
+        vMacros.classList.add("macros");
+        vMacros.classList.remove("macrosdark-mode");
     }
 });
 
@@ -45,6 +50,7 @@ let vTartaLaor = document.getElementById("tartaLaor");
 let vSerenstum = document.getElementById("serenstum");
 let vBocadilloCaviar = document.getElementById("bocadilloCaviar");
 let vRecetaSelecionada = document.getElementById("recetaSelecionada");
+let vsalchichaMixtaMoti = document.getElementById("salchichaMixtaMoti");
 
 vPescadoVapor.addEventListener("click", () => {    
     vRecetaSelecionada.innerHTML = `<div class="receta">
@@ -157,6 +163,28 @@ vSerenstum.addEventListener("click", () => {
                         <li>100 Troncos de guarida de dragón (es en azul, 400 en verde)</li>
                         <li>300 Savia de madera de dragón (es en azul, 1200 en verde)</li>
                         <li>100 Fardo de juncia de espejo</li>
+                    </ul>
+                </div>
+            </div>`
+});
+
+
+vsalchichaMixtaMoti.addEventListener("click", () => {    
+    vRecetaSelecionada.innerHTML = `<div class="receta">
+                <div class="titulo">
+                    Salchicha Mixta de Moti (N.40)
+                </div>
+                
+                <div class="materiales">
+                    <p><i>Descripción: Aumenta la tasa de golpes mágicos críticos un 120.0 y el daño mágico crítico un 10.0% durante 60 segundos.</i></p>
+                    <p>Materiales:</p>
+                    <ul>                        
+                        <li>100 Runas activación</li>
+                        <li>100 Madera de escuadra de tejo (es en azul, 400 en verde)</li>
+                        <li>300 Savia de orquídea lunar (es en azul, 1200 en verde)</li>
+                        <li>100 Fardo de cardo verde</li>
+                        <li>100 Carne de gusano deliciosa</li>
+                        <li>100 Lubina</li>
                     </ul>
                 </div>
             </div>`

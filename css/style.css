@@ -497,7 +497,8 @@ body{
     overflow: hidden;
 }
 
-.macros h2{
+.macros h2,
+.macrosdark-mode h2{
     width: 99%;
     color: #ccbd58;
     background-color: #271d14;
@@ -507,7 +508,7 @@ body{
     font-size: 1.8rem;
 }
 
-.macros .listadoMacros{
+.listadoMacros{
     width: 90%;
     height: 100%;
     padding: 15px;
@@ -517,7 +518,7 @@ body{
     flex-wrap: wrap;
 }
 
-.macros .listadoMacros .unaMacro{
+.listadoMacros .unaMacro{
     width: 90%;
     padding: 20px;
     background-color: #271d14;
@@ -531,20 +532,20 @@ body{
     transition: all 0.5s ease-in-out;
 }
 
-.macros .listadoMacros .unaMacro:hover{
+.listadoMacros .unaMacro:hover{
     transition: all 0.5s ease-in-out;
     transform: scale(1.05);
     background-color: rgba(39, 29, 20, 0.9);
 }
 
-.macros .listadoMacros .unaMacro .descripcion{
+.listadoMacros .unaMacro .descripcion{
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 10px;
     border-bottom: 1px solid #ccbd58;
 }
 
-.macros .listadoMacros .unaMacro .codigo{
+.listadoMacros .unaMacro .codigo{
     color: #fff;
 }
 
@@ -555,7 +556,7 @@ body{
 
 .cocinadark-mode{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
     display: flex;
     justify-content: flex-start;
@@ -584,6 +585,19 @@ body{
     align-items: center;*/
     background-color: #000 !important;
 }
+
+.macrosdark-mode{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;    
+}
+
+
+
 
 
 /* ANIMACIONES CSS */
